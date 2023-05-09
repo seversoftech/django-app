@@ -4,4 +4,4 @@ from django.http import HttpResponse
 def member(request):
     return HttpResponse("Hello Word")
 
-# Create your views here.
+# Create your views here...
