@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
@@ -24,8 +25,10 @@ def main(request):
   return HttpResponse(template.render())
 
 def testing(request):
+  mymembers=Member.objects.all().values()
   templates = loader.get_template('template.html')
   context={
+    'mymembers': mymembers,
     'fruits':['Apple', 'Banana', 'Cherry'],
     'firstname':'Linus Tovalds'
   }
