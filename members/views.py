@@ -25,10 +25,10 @@ def main(request):
   return HttpResponse(template.render())
 
 def testing(request):
-  mymembers=Member.objects.all().values()
+  mydata = Member.objects.all().values()
   templates = loader.get_template('template.html')
-  context={
-    'mymembers': mymembers,
+  context = {
+    'mymembers': mydata,
     'fruits':['Apple', 'Banana', 'Cherry','Pineapple','Orange','Watermelon'],
     'firstname':'Linus Tovalds'
   }
