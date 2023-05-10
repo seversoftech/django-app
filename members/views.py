@@ -18,3 +18,7 @@ def details(request, id):
     'mymember':mymember,
   }
   return HttpResponse(templates.render(context,request))
+
+def main(request):
+  template = loader.get_template('main.html')
+  return HttpResponse(template.render())
