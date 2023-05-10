@@ -14,11 +14,22 @@
 <h1>Hello {{ firstname }}, how are you? Here is the test list</h1>
 
 
-<ul>
+<ol type="1">
   {% for x in mymembers %}
-    <li>{{ x.firstname }}</li>
+    <li>Firstname: {{ x.firstname }} Lastname {{ x.lastname }} Phone {{ x.phone }}</li>
+  {% endfor %}
+</ol>
+
+<ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.first %}
+        style='background-color:rgb(7, 97, 128);color:aquamarine;'
+      {% endif %}
+    >{{ x }}</li>
   {% endfor %}
 </ul>
 {% endwith %}
+{% include 'footer.html' %} 
 </body>
 </html>

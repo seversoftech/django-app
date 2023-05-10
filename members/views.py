@@ -29,7 +29,7 @@ def testing(request):
   templates = loader.get_template('template.html')
   context={
     'mymembers': mymembers,
-    'fruits':['Apple', 'Banana', 'Cherry'],
+    'fruits':['Apple', 'Banana', 'Cherry','Pineapple','Orange','Watermelon'],
     'firstname':'Linus Tovalds'
   }
   return HttpResponse(templates.render(context, request))
