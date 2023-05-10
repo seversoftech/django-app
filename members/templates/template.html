@@ -19,7 +19,7 @@
       </tr>
     {% endfor %}
   </table>
-
+{% comment %}
 {% with firstname="Sever" %}
 <h1>Hello {{ firstname }}, how are you? Here is the test list</h1>
 
@@ -41,6 +41,7 @@
 </ul>
 
 {% endwith %}
+{% endcomment %}
 {% include 'footer.html' %} 
 </body>
 </html>
